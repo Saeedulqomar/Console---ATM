@@ -109,7 +109,6 @@ def signIn(df):
     if user_name in df['username'].values:
         password = input('Enter your password: ')
         if password == df.loc[df['username'] == user_name, 'password'].iloc[0]:
-            os.system('cls' if os.name == 'nt' else 'clear')
             print(f'Welcome {user_name}')
 
             while True:
